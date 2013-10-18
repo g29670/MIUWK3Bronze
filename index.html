@@ -110,8 +110,8 @@
         <!-- Form Content -->
 	    <form action="#" method="post" id="movieForm">
 	        <div class="entermovie">
-	            <h2>Enter Movie</h2>
-	            <h4>* Required Fields</h4>
+	            <h2><u>Enter Movie</u></h2>
+	            <h4>* Required Fields</h4>   
 	            <ul class="errors" id="errors">
 
                   <div align="left">
@@ -119,7 +119,7 @@
 	                <label for="styles" id="select"> <strong>*Movie Style:</strong></label>
                     <select id="styles">
                         <option value="--Choose a Style--">Choose A Style</option>
-                        <option value="DVD">DVD</option>
+                        <option value="DVD">DVD</option
                         <option value="VHS">VHS</option>
                         <option value="Blu-ray">Blu-ray</option>
                     </select> </br>
@@ -156,7 +156,8 @@
             <div class="comments">
                 <h2><u>Movie Comments</u></h2>
                     <div data-role="fieldcontain">
-                        <label for="comments"> <strong>Comments:</strong></label><textarea id="comments" placeholder="Soooo...How was it?"></textarea>
+                        <label for="comments"> <strong>*Comments:</strong></label></br>
+                        <textarea id="comments" placeholder="Soooo...How was it?"></textarea>
                     </div>  
             </div>
 
@@ -185,17 +186,17 @@
         </div>
          <!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
+		<!-- Navbar -->
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="secondaryColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About App</a></li>
+					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
+					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About App</a></li>
 					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
 				</ul>
 			</div>
-		</div>   
-    </div>    
-
+		</div>
+	</div>
+			
 	<!-- Start of About Page -->
 	<div data-role="page" id="about" data-add-back-btn="true">
 
@@ -213,7 +214,6 @@
 
 			<div>
 				<ul data-role="listview">
-
 					<li>
 						<a href="#appWorkings" id="About the App"/>
 							<img src="images/aboutLogo.png"/>
@@ -245,10 +245,8 @@
 							<p>This will take you to the "Gold" version of this application.</p>
 						</a>
 					</li>
-
-				</ul>
+				</ul></br></br>
 			</div>
-
 		</div>
 
 		<!-- Footer -->
@@ -262,10 +260,10 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div>	
 
-	<!-- Start of About App Page -->
-	<div data-role="page" id="appWorkings" data-add-back-btn="true">
+	    <!-- Start of About App Page -->
+	    <div data-role="page" id="appWorkings" data-add-back-btn="true">
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
@@ -285,19 +283,14 @@
 				        <p class="indent">This application will allow you to store your current collection of movies in a central data location. You will be able to document your DVD, Blu-ray, and ,for the diehard movie fans, VHS videos. You will find that this app will help you or your guest choose a movie quickly for whatever mood you are in.</p>		
 			        </div>
 			    </ul>   
-		   </div>
+		    </div>
 		</div>	
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <p><strong>Movies help you to experience the world!!!</strong></p>
+		    </div>
+		</div>    
 	</div>
 
 	<!-- Start of aboutDeveloper Page -->
@@ -316,24 +309,19 @@
 			</div>
 
 			<div>      
-				</ul>
-			        </div>
-				        <p class="indent"><strong>Hello, my name is Elijah Moran. I am a retired US Army combat veteran serving faithfully for over 20 years. I now reside in the Houston, Texas metropolitan area. I have a wife and four children. Two of my children are presently attending college. I, myself am attending Full Sail University with the desire to become a Mobile Media Developer. I hope you enjoy the application.</strong></p>		
+				<ul>
+			        <div>
+				        <p class="indent"><strong>Hello, my name is Elijah Moran. I am a retired U.S. Army combat veteran serving faithfully for over 20 years. I now reside in the Houston, Texas metropolitan area. I have a wife and four children. Two of my children are presently attending college. I, myself am attending Full Sail University with the desire to become a Mobile Media Developer. I hope you enjoy the application.</strong></p>		
 			        </div>
 			    </ul>   
-		   </div>
+		    </div>
 		</div>	
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <p><strong>Movies help you to experience the world!!!</strong></p>
+		    </div>
+		</div>    
 	</div>
 
 	<!-- Start of Credits Page -->
@@ -380,18 +368,11 @@
 		</div>	
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <p><strong>Movies help you to experience the world!!!</strong></p>
+		    </div>
+		</div>    
 	</div>
-
-
 
 	<!-- Start of otherApp Page -->
 	<div data-role="page" id="otherApp" data-add-back-btn="true">
@@ -406,27 +387,21 @@
 
 			<ul data-role="listview">
 				<li>
-					<img src="images/gold.png"/>
+					<img src="images/bronze.png"/>
 					<h4>Bronze App</h4>
 					<p>Currently, you are using the Bronze App.<br />To try the Gold App, click the button<br />below.</p>
 				</li>
 			</ul>
 
-			<a href="http://g29670.github.com/MiU-Project-3/Gold/index.html" data-role="button">Review the Gold App</a>
-
+			<a href="https://github.com/g29670/MIUWK3Gold" data-role="button" class="secondaryColor">Review the Gold App</a>
 		</div>
 
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="secondaryColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <p><strong>Movies help you to experience the world!!!</strong></p>
+		    </div>
+		</div>    
 	</div>
 
 	<!-- Start of News Page -->
@@ -440,41 +415,33 @@
 		<!--  News Page Content -->
 		<div data-role="content">
 
-			<ul data-role="listview" data-filter="true">
+		    <img src="images/logo.png"/></br></br>
+
+			<ul data-role="listview" data-filter="true"></br>
 
 				<li>
 					<a href="#underConstruction">
-						<img src="images/Logo.png"/>
-						<h4>Gravity’s Friday Box Office Should Propel It To Another Record Weekend </h4>
-						<span><small>by Mack Rawden</small></span>
+						<img src="images/gravity.png"/>
+						<h4>Gravity Predicted To Win The Box Office For The Third Time </h4>
+						<span><small>by Eric Eisenberg</small></span>
 						</br></br>
-						<p>2013-10-12<br/>Tags: Movies,blockbusters</p>
+						<p>2013-10-17<br/>Tags: Movies, Blockbusters</p>
 					</a>
 				</li>
 
 				<li>
 					<a href="#underConstruction">
-						<img src="images/Logo.png"/>
-						<h4>Operation Kino 134 Review: The Unbearable Tension Of Captain Phillips </h4>
-						<span><small>by Operation Kino</span></small>
+						<img src="images/legolas.png"/>
+						<h4>Orlando Bloom Talks About His Return To Middle-Earth On The Set Of The Hobbit </h4>
+						<span><small>by Eric Eisenberg</span></small>
 						</br></br>
-						<p>2013-10-12<br/>Tags: Adventure</p>
+						<p>2013-10-17<br/>Tags: Adventure</p>
 					</a>
 				</li>
 
 				<li>
 					<a href="#underConstruction">
-						<img src="images/Logo.png"/>
-						<h4>'The Walking Dead' Premiere: Here's Everything You Missed</h4>
-						<span><small>by Alex Zalben</small></span>
-						</br></br>
-						<p>2013-10-13 <br/>Tags: Action</p>
-					</a>
-				</li>
-
-				<li>
-					<a href="#underConstruction">
-						<img src="images/Logo.png"/>
+						<img src="images/angry.png"/>
 						<h4>'Angry Birds': What To Expect When It Crashes Into Theaters.</h4>
 						<span><small>by Alex Zalben</small></span>
 						</br></br>
@@ -484,11 +451,21 @@
 
 				<li>
 					<a href="#underConstruction">
-						<img src="images/Logo.png"/>
+						<img src="images/harry.png"/>
 						<h4>'Harry Potter' Reunion: Daniel Radcliffe And Alan Rickman Reveal What It'd Take</h4>
 						<span><small>by Kevin P. Sullivan</small></span>
 						</br></br>
 						<p>2013-10-13 <br/>Tags: Adventure, Action</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="#underConstruction">
+						<img src="images/dead.png"/>
+						<h4>'The Walking Dead' Premiere: Here's Everything You Missed</h4>
+						<span><small>by Alex Zalben</small></span>
+						</br></br>
+						<p>2013-10-13 <br/>Tags: Action, Horror</p>
 					</a>
 				</li>
 			</ul>
@@ -501,11 +478,10 @@
 				<ul>
 					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
 					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
+					<li><a href="#news"data-icon="news" data-iconpos="left" class="secondaryColor">Blockbuster News</a></li>
 				</ul>
 			</div>
 		</div>
-
 	</div>
 
 	<!-- Start of Construction Page -->
