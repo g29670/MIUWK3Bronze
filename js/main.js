@@ -50,7 +50,7 @@ var Main = {
   
   autoFillMoviesIfNecessary : function() {
   if(localStorage.length === 0) {
-      alert("There are no moviesin your library so the default movies have been added.");
+      alert("There are no movies in your library so the default movies have been added.");
       Data.autoFillMovies();
       Main.showData();
     }

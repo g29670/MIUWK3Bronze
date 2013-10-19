@@ -6,6 +6,12 @@
 <head>
 
 	<meta charset="utf-8">
+	<meta name="keywords" content="DVD, VHS, Blu-ray, library, movielib"/>
+    <meta name="description" content="My Movie Library"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
 	<title>My Movie Library</title>
 
@@ -33,7 +39,7 @@
 <body class="createImage">
 
 	<!-- Start of Home Page -->
-	<div data-role="page" id="home">
+	<div data-role="page" data-title="My Movie Library Startpage"id="home" >
 	    
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
@@ -59,21 +65,20 @@
 
 			<!-- Browse -->
 			<div align="center" />
-			    <div class="ui-grid-b"><strong>Click buttons below to browse</strong></p>
-
-				    <div class="ui-block-a" >
-					    <a href="#underConstruction">
-						    <img src="images/dvdbtn.png"/>
-					    </a>   
+			    <div class="ui-grid-b"/><strong>Click buttons below to browse Categories:</strong></br>
+                    <div class="ui-block-a" > 
+					    <a href="#underConstruction" />
+						    <img class="imgcenter" src="images/dvdbtn.png"/> 
+						</a>     
 				    </div>
 				    <div class="ui-block-b" >
-					    <a href="#underConstruction">
-						    <img src="images/vhsbtn.png"/>
+					    <a href="#underConstruction" />
+						    <img class="imgcenter" src="images/vhsbtn.png"/>
 					    </a>    
 				    </div>
 				    <div class="ui-block-c" >
-					    <a href="#underConstruction">
-						    <img src="images/blu-raybtn.png"/>
+					    <a href="#underConstruction" />
+						    <img class="imgcenter" src="images/blu-raybtn.png"/>
 					    </a>
 	                </div>
 				</div>
@@ -81,7 +86,7 @@
 
 			<!-- Current Library -->
 			<div>
-				<a href="#library" id="displayData" data-role="button" data-icon="arrow-r" data-theme="e" data-iconpos="right" class="secondaryColor" >Current Library</a>
+				<a href="#library" id="displayData" data-role="button" data-icon="arrow-r" data-theme="e" data-iconpos="right" class="secondaryColor">Search Movie Library</a>
 			</div>
 
 		</div>
@@ -100,109 +105,121 @@
 	</div>
 
 	<!-- Start of movieForm Page -->
-    <div data-role="page" id="additem" data-add-back-btn="true">
+	<div data-role="page" id="additem" data-add-back-btn="true">
 
-        <!-- Header -->
-		<div data-role="header"> 
-		    <h1>Add a MOVIE </h1> 
-		</div>      
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" class="mainColor">
+			<h1>Add a Movie</h1>
+		</div>
 
-        <!-- Form Content -->
-	    <form action="#" method="post" id="movieForm">
-	        <div class="entermovie">
-	            <h2><u>Enter Movie</u></h2>
-	            <h4>* Required Fields</h4>   
-	            <ul class="errors" id="errors">
+		<!--  movieForm Page Content -->
+		<div data-role="content">
 
-                  <div align="left">
-	                <!-- Start Select & Option -->
-	                <label for="styles" id="select"> <strong>*Movie Style:</strong></label>
-                    <select id="styles">
-                        <option value="--Choose a Style--">Choose A Style</option>
-                        <option value="DVD">DVD</option
-                        <option value="VHS">VHS</option>
-                        <option value="Blu-ray">Blu-ray</option>
-                    </select> </br>
+		    <img src="images/logo.png" align="left"/></br></br>
+    	    <ul data-role="listview" data-filter="true"></br>    
+
+                <!-- Form Content -->
+	            <form action="#" method="post" id="movieForm">
+	                <div class="movieinfo">
+	                    <h4><u>Enter Movie</u></h4>
+	                    <h5>* Required Fields</h5>   
+	                    <ul class="errors" id="errors">
+
+	                        <div align="left">
+	                            <!-- Start Select & Option -->
+	                            <label for="styles" id="select"> <strong>*Movie Style:</strong></label>
+                                <select id="styles">
+                                    <option value="--Choose a Style--">Choose A Style</option>
+                                    <option value="DVD">DVD</option>
+                                    <option value="VHS">VHS</option>
+                                    <option value="Blu-ray">Blu-ray</option>
+                                </select> </br>
                     
-                    <!-- Text Field -->    
-                    <label for="movie"> <strong>*Movie Name:</strong> </label><input type="text" placeholder="Blade Runner..." id="movie" /><br/>
+                                <!-- Text Field -->    
+                                <label for="mname"> <strong>*Movie Name:</strong> </label><input type="text" placeholder="Blade Runner..." id="mname" /><br/>
                     
-                    <label for="mgenre"> <strong>*Movie Genre:</strong> </label><input type="text" placeholder="Action..." id="movie" /><br/>
+                                <label for="mgenre"> <strong>*Movie Genre:</strong> </label><input type="text" placeholder="Action..." id="mgenre" /><br/>
                 
 
-                    <label for="myear"> <strong>*Year movie made:</strong> </label><input type="text" placeholder="01-01-1988..." id="movie" /><br/>
+                                <label for="myear"> <strong>*Year movie made:</strong> </label><input type="text" placeholder="01-01-1988..." id="myear" /><br/>
                 
 
-                    <label for="mage"> <strong>*Suitable viewing age:</strong> </label><input type="text" placeholder="18..." id="movie" /><br/>
+                                <label for="mage"> <strong>*Suitable viewing age:</strong> </label><input type="text" placeholder="18..." id="mage" /><br/>
                 
          
-                    <!-- Checkbox -->
-                    <label for="favorite"> <strong>Is this a favorite?</strong> </label><input type="checkbox" id="favorite" value="Yes" checked="true" class="favorite"/><br/>
+                                <!-- Checkbox -->
+                                <label for="favorite"> <strong>Is this a favorite?</strong> </label><input type="checkbox"  id="favorite" value="Yes" checked="true" class="favorite" /><br/>
+                    
+                                <!-- Range -->
+                                <label for="movierating"> <strong>How would you rate this movie? (On a scale of 1 to 10):</strong> </label><input type="range" min="1" max="10" id="movierating" value="5"/><br/><br/>
 
-                    <!-- Range -->
-                   <label for="movierating"> <strong>How would you rate this movie? (On a scale of 1 to 10):</strong> </label><input type="range" min="1" max="10" id="score" value="5"/><br/><br/>
+                                <!-- Radio -->
+                                <label for="quality" id="quality" checked="true" class="quality"><strong>What is the quality of this movie?</strong>
+                                    <ul>
+                                       <input id="excellent" name="quality" type="radio" value="Excellent" data-role="none" class="quality"></br><label for="excellent">Excellent</label>
+                                       <input id="good" name="quality" type="radio" value="Good" data-role="none" class="quality"></br><label for="good">Good</label>
+                                       <input id="damaged" name="quality" type="radio" value="Damaged" data-role="none" class="quality"><label for="damaged">Damaged</label>
+                                    </ul>
+                                </label> 
+                            </div>      
+                        </ul>
+			        </div>
+			        <div class="comments">
+                        <h4><u>Movie Comments</u></h4>
+                        <div data-role="fieldcontain">
+                            <label for="comments"> <strong>*Comments:</strong></label></br>
+                            <textarea id="comments" placeholder="Soooo...How was it?"></textarea>
+                        </div>  
+                    </div>
 
-                   <!-- Radio -->
-                   <label for="quality"><strong>What is the quality of this movie?</strong></label>
-                    <input id="excellent" name="quality" type="radio" value="Excellent" data-role="none" checked="true" class="quality"><label for="excellent">Excellent</label>
-
-                    <input id="good" name="quality" type="radio" value="Good" data-role="none" checked="true" class="quality"><label for="good">Good</label>
-
-                    <input id="damaged" name="quality" type="radio" value="Damaged" data-role="none" checked="true" class="quality"><label for="damaged">Damaged</label>
-                  </div>
-               </ul>      
-            </div>
-        
-            <div class="comments">
-                <h2><u>Movie Comments</u></h2>
-                    <div data-role="fieldcontain">
-                        <label for="comments"> <strong>*Comments:</strong></label></br>
-                        <textarea id="comments" placeholder="Soooo...How was it?"></textarea>
-                    </div>  
-            </div>
-
-            <!-- Call to action -->
-            <div class="button">
-                <a href="#library" data-role="none" data-icon="plus" data-theme="b" id="saveData" rel="external">    
-                    <img class="imgcenter" src="images/addamovie.png" />  
-                </a>                    
-            </div>    
-	    </form>
+                    <!-- Call to action -->
+                    <div class="button">
+                        <a href="#library" data-role="none" data-icon="plus" data-theme="b" id="saveData" rel="external">    
+                            <img class="imgcenter" src="images/addamovie.png" />  
+                        </a>                    
+                    </div>    
+	            </form>	
+	        </ul>    
+		</div>	
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
+		    </div>
+		</div>    
 	</div>
 
+       
+	
 	<!-- Movie Library Page -->
 	<div data-role="page"  data-title="My Movie Library" id="library" data-add-back-btn="true">
 
 	    <div data-role="header" data-position="fixed" class="mainColor">
 	        <h1>My Movie Library</h1>
-	    </div>
-	    
-	    <div data-role="content">
-	        <!--Listview -->
-	        <div id="entermovie" data-role="collapsible-set"></div></br>
 
-	        <a href="#" id="clearData" data-role="button" data-theme="e">Clear Movie Library</a>  
-            <a href="#additem" id="addNew" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right" >Add New Movie</a>
+	    </div>
+	    <!--  library Content -->
+	    <div data-role="content">
+            
+	        <img src="images/logo.png" align="left"/></br></br>
+    	    <ul data-role="listview" data-filter="true"></br> 
+	            <!--Listview -->
+	            <div id="movielist" data-role="collapsible-set"></div></br>
+
+	                <a href="#" id="clearData" data-role="button" data-theme="e">Clear Movie Library</a>  
+                    <a href="#additem" id="addNew" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right" >Add New Movie</a>
+                </div>
+             </ul>
         </div>
-         <!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-		<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="secondaryColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+    </div>   
+   
 			
 	<!-- Start of About Page -->
 	<div data-role="page" id="about" data-add-back-btn="true">
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>About</h1>
+			<h1>ABOUT Information</h1>
 		</div>
 
 		<!--  About Content -->
@@ -267,28 +284,29 @@
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>About the App</h1>
+			<h1>ABOUT the Application</h1>
 		</div>
 
 		<!--  About Content -->
 		<div data-role="content">
 
 			<div>
-				<img src="images/aboutlogo.png" class="imgcenter" />
+				<img src="images/aboutlogo.png" class="imgcenter" id="aboutLogo.Img"  align="center" />
 			</div>
 
 			<div>      
 				</ul>
-			        </div>
-				        <p class="indent">This application will allow you to store your current collection of movies in a central data location. You will be able to document your DVD, Blu-ray, and ,for the diehard movie fans, VHS videos. You will find that this app will help you or your guest choose a movie quickly for whatever mood you are in.</p>		
+			        <div>
+				        <p class="indent"><strong>This application will allow you to store your current collection of movies in a central data location. You will be able to document your DVD, Blu-ray, and ,for the diehard movie fans, VHS videos. You will find that this app will help you or your guest choose a movie quickly for whatever mood you are in.</strong></p>		
 			        </div>
 			    </ul>   
 		    </div>
-		</div>	
+		</div>
+         	
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="footer" data-position="fixed" class="mainColor">
-			    <p><strong>Movies help you to experience the world!!!</strong></p>
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
 		    </div>
 		</div>    
 	</div>
@@ -298,7 +316,7 @@
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>About the Developer</h1>
+			<h1>ABOUT the Developer</h1>
 		</div>
 
 		<!--  About Content -->
@@ -319,7 +337,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="footer" data-position="fixed" class="mainColor">
-			    <p><strong>Movies help you to experience the world!!!</strong></p>
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
 		    </div>
 		</div>    
 	</div>
@@ -329,7 +347,7 @@
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>Credits for Sources</h1>
+			<h1>ABOUT Credits </h1>
 		</div>
 
 		<!--  About Content -->
@@ -344,11 +362,11 @@
 			        <div>
 				        <p class="indent"><strong>Many of the images used to create the logos and Main page where copyright free images that were downloaded from pages below:</strong></p>
 				        </br>
-				        <p class="indent">Icons Pedia, http://www.iconspedia.com/browse/icons/random/240.html</p>
+				        <p class="indent">Icons Pedia --- http://www.iconspedia.com/browse/icons/random/240.html</p>
 				        </br>
-				        <p class="indent">Very Icon.com, http://www.veryicon.com/icons/movie--tv/curtains/theatrespotlights.html</p>
+				        <p class="indent">Very Icon.com --- http://www.veryicon.com/icons/movie--tv/curtains/theatrespotlights.html</p>
 				        </br>
-				        <p class="indent">Open Clipart, http://openclipart.org/search/?query=smiley%20face&page=3</p>
+				        <p class="indent">Open Clipart --- http://openclipart.org/search/?query=smiley%20face&page=3</p>
 				        </br></br>
                         <p class="indent"><strong>The news reals came from the following sites:</strong></p>
                         </br>
@@ -369,7 +387,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="footer" data-position="fixed" class="mainColor">
-			    <p><strong>Movies help you to experience the world!!!</strong></p>
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
 		    </div>
 		</div>    
 	</div>
@@ -379,8 +397,12 @@
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>About the Other App</h1>
+			<h1>ABOUT the Gold Application</h1>
 		</div>
+
+        <div>
+            <img src="images/aboutlogo.png" class="imgcenter" />
+        </div>
 
 		<!--  Other App Content -->
 		<div data-role="content">
@@ -388,8 +410,8 @@
 			<ul data-role="listview">
 				<li>
 					<img src="images/bronze.png"/>
-					<h4>Bronze App</h4>
-					<p>Currently, you are using the Bronze App.<br />To try the Gold App, click the button<br />below.</p>
+					<h4>Bronze Application</h4>
+					<p>Currently, you are using the Bronze Application.<br />To try the Gold App, click the button<br />below.</p></br></br>
 				</li>
 			</ul>
 
@@ -399,7 +421,7 @@
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
 			<div data-role="footer" data-position="fixed" class="mainColor">
-			    <p><strong>Movies help you to experience the world!!!</strong></p>
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
 		    </div>
 		</div>    
 	</div>
@@ -409,13 +431,13 @@
 
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" class="mainColor">
-			<h1>Blockbuster News</h1>
+			<h1>BLOCKBUSTER NEWS</h1>
 		</div>
 
 		<!--  News Page Content -->
 		<div data-role="content">
 
-		    <img src="images/logo.png"/></br></br>
+		    <img src="images/logo.png" align="left"/></br></br>
 
 			<ul data-role="listview" data-filter="true"></br>
 
@@ -471,16 +493,10 @@
 			</ul>
 	    </div>
 
-		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="secondaryColor">Blockbuster News</a></li>
-				</ul>
-			</div>
+			<!-- Footer -->
+        <div data-role="footer" data-position="fixed" class="mainColor">
+            <div data-role="footer" data-position="fixed" class="mainColor">
+            <h3><strong>Movies help you to experience the world!!!</strong></h3>
 		</div>
 	</div>
 
@@ -498,18 +514,13 @@
 			<img src="images/Construction.png" class="imgSize"/>
 
 		</div>
-
+		
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed">
-			<!-- Navbar -->
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home" data-iconpos="left" class="mainColor">Home</a></li>
-					<li><a href="#about" data-icon="info" data-iconpos="left" class="mainColor">About App</a></li>
-					<li><a href="#news"data-icon="news" data-iconpos="left" class="mainColor">Blockbuster News</a></li>
-				</ul>
-			</div>
-		</div>
+			<div data-role="footer" data-position="fixed" class="mainColor">
+			    <h3><strong>Movies help you to experience the world!!!</strong></h3>
+		    </div>
+		</div>    
 	</div>
 
 	<!-- JavaScript under here -->

@@ -29,9 +29,9 @@ var Form = {
     	    if ($(radios[i].value == "#Excellent" && item.quality[1] == "#Excellent")) {
                 radios[i].setAttribute("checked", "checked");
             } else if ($(radios[i].value == "#Good" && item.quality[1] == "#Good")) {
-                radios[i].setAttribute("checked", "checked");
+                       radios[i].setAttribute("checked", "checked");
             } else if ($(radios[i].value == "#Damaged" && item.quality[1] == "#Damaged")) {
-                radios[i].setAttribute("checked", "checked"); 
+                       radios[i].setAttribute("checked", "checked"); 
             }       
         }
         return qualityValue;     
